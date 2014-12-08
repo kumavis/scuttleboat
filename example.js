@@ -21,6 +21,12 @@ var bs = B.createStream()
 as.pipe(bs).pipe(as)
 
 
+// Debuggery
+
+A.on('create', function(key, subdoc){ console.log('A saw new sub-doc:', key) })
+B.on('create', function(key, subdoc){ console.log('B saw new sub-doc:', key) })
+
+
 // Dynamically add sub-documents
 
 aMeta = A.add('meta', 'Model')

@@ -63,3 +63,8 @@ Clone a scuttleboat instance
 ```js
 boat.clone()
 ```
+
+Listen for new subdocs
+```js
+boat.on('create', function(key, subdoc){ /* ... */ })
+```

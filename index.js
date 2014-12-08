@@ -30,9 +30,12 @@ boat._create = function(record) {
   var data = record.state
   var constructor = this._constructors[data.type]
   if (constructor) {
-    this._add(data.key, constructor(data.opts))
+    var subdoc = this._add(data.key, constructor(data.opts))
+    this.emit('create', data.key, subdoc)
   } else {
-    throw new Error('UnknownTypeError - "'+data.type+'" was not a registered constructor')
+    setTimeout(function(){
+      throw new Error('UnknownTypeError - "'+data.type+'" was not a registered constructor')
+    })
   }
 }
 
