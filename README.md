@@ -59,6 +59,11 @@ Cannot provide more than one initialization argument.
 boat.add(key, type, opts)
 ```
 
+Get a list of all subdocs
+```js
+boat.list() //=> {key1: subdoc1, key2: subdoc2, ...}
+```
+
 Clone a scuttleboat instance
 ```js
 boat.clone()

@@ -50,6 +50,10 @@ boat.add = function(key, type, opts) {
   return this.get(key)
 }
 
+boat.list = function() {
+  return this._manifest.rows
+}
+
 /* from https://github.com/dominictarr/scuttlebutt/blob/8217ec7f96091838be3b56122d16176ba2b63fa6/index.js#L287-L313 */
 
 //create another instance of this scuttlebutt,
