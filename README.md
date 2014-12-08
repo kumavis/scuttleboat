@@ -48,10 +48,11 @@ setTimeout(function(){
 
 Add a sub-document to the boat.
 The sub-document instance will be created automatically.
-Specify the key (string),
-the type from the list of constructors (string),
-and an (optional) options hash to instantiate the instance with.
-Options hash must be serializable.
+Provide:
+* the key (string)
+* the type from the list of constructors (string)
+* an (optional) argument to instantiate the instance with.
+Argument must be serializable.
 Cannot provide more than one initialization argument.
 
 ```js
