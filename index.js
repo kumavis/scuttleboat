@@ -32,15 +32,26 @@ boat._create = function(record) {
   if (constructor) {
     this._add(data.key, constructor(data.opts))
   } else {
-    throw new Error('UnknownTypeError - '+data.type+' was not registered constructor')
+    throw new Error('UnknownTypeError - "'+data.type+'" was not a registered constructor')
   }
+}
+
+// Public Interface
+
+boat.add = function(key, type, opts) {
+  this._manifest.add({
+    key: key,
+    type: type,
+    opts: opts,
+  })
+  return this.get(key)
 }
 
 /* from https://github.com/dominictarr/scuttlebutt/blob/8217ec7f96091838be3b56122d16176ba2b63fa6/index.js#L287-L313 */
 
 //create another instance of this scuttlebutt,
 //that is in sync and attached to this instance.
-boat._clone = function () {
+boat.clone = function () {
   var A = this
   var B = new (A.constructor)(A._opts)
   B.setId(A.id) //same id. think this will work...
@@ -85,16 +96,3 @@ function streamDone(stream, listener) {
   stream.on('error', onDone)
   stream.on('close', onDone)
 }
-
-// Public Interface
-
-boat.add = function(key, type, opts) {
-  this._manifest.add({
-    key: key,
-    type: type,
-    opts: opts,
-  })
-  return this.get(key)
-}
-
-boat.clone = boat._clone
