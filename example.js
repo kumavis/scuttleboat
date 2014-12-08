@@ -1,4 +1,4 @@
-var ScuttleBoat = require('./scuttleboat.js')
+var ScuttleBoat = require('./index.js')
 var Model = require('scuttlebutt/model')
 
 // Define sub-document constructors
