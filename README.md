@@ -56,7 +56,7 @@ Argument must be serializable.
 Cannot provide more than one initialization argument.
 
 ```js
-boat.add(key, type, opts)
+boat.add(key, type, opts) //=> subdoc
 ```
 
 Query a subdoc
