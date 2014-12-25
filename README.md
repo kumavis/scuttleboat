@@ -59,6 +59,11 @@ Cannot provide more than one initialization argument.
 boat.add(key, type, opts)
 ```
 
+Query a subdoc
+```js
+boat.get(key) //=> subdoc
+```
+
 Get a list of all subdocs
 ```js
 boat.list() //=> {key1: subdoc1, key2: subdoc2, ...}
@@ -73,3 +78,5 @@ Listen for new subdocs
 ```js
 boat.on('create', function(key, subdoc){ /* ... */ })
 ```
+
+This class inherits from [Scuttlebucket](https://github.com/dominictarr/scuttlebucket), see the documentation there for more info.
