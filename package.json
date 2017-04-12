@@ -17,6 +17,6 @@
     "crdt": "~3.6.4"
   },
   "devDependencies": {
-    "scuttlebutt": "~5.6.9"
+    "scuttlebutt": "~5.6.15"
   }
 }
