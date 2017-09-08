@@ -2,6 +2,8 @@
 
 ### Sail the high seas with ScuttleBoat
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kumavis/scuttleboat.svg)](https://greenkeeper.io/)
+
 Like [Scuttlebucket](https://github.com/dominictarr/scuttlebucket), but allows for dynamically adding records later
 
 ```js
